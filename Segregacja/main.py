@@ -41,7 +41,7 @@ def empty_trash_and_show_popup():
 
     if system_name == "Windows":
         try:
-            # Odśwież kosz na systemie Windows
+
             ctypes.windll.shell32.SHEmptyRecycleBinW(None, None, 0)
             show_popup("Kosz został wyczyszczony.")
         except Exception as e:
@@ -78,7 +78,7 @@ def empty_trash_and_show_popup():
         show_popup("Kosz został wyczyszczony.")
     elif system_name == "Windows":
         try:
-            # Odśwież kosz na systemie Windows
+
             ctypes.windll.shell32.SHEmptyRecycleBinW(None, None, 0)
             show_popup("Kosz został wyczyszczony.")
         except Exception as e:
@@ -112,7 +112,7 @@ def show_popup(message):
 
 
 def main():
-    folder_path = "D:\\Test"  # Zmień na właściwą ścieżkę
+    folder_path = "D:\\Test"  
 
     root = tk.Tk()
     root.title("Akcje na folderze")
